@@ -2,21 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>ownApp</title>
+    <title>Title</title>
     <th:block th:replace="~{includes/commonScripts :: head}"></th:block>
-
-
 </head>
-
 <body>
-<h1 >
-    Zalogowany jako: <span th:text="${@userContextService.getLoggedUsername()}"></span>
-</h1>
-
-
-
-<a th:href="@{/register}">Register</a>
-<a th:href="@{/login}">Sign in</a>
+<h1>Thank you for registering</h1>
 
 <th:block th:replace="~{includes/commonScripts :: end-of-body}"></th:block>
 </body>
