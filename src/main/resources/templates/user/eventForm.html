@@ -8,14 +8,15 @@
 <body>
 <h1>Sign in</h1>
 
-<form method="post" th:action="@{/eventForm.html}" >
+<form method="post" th:action="@{/eventForm}" th:object="${eventForm}" >
     <input type="text" name="title" placeholder="Please enter title of event..." >
     <br>
-    <input type="text" name="startdate" placeholder="Please enter start date of event">
+    <input type="text" name="startdate" placeholder="Start date format YYYY-MM-DD">
     <br>
-    <input type="text" name="enddate" placeholder="Please enter end date of event">
+    <input type="text" name="enddate" placeholder="End date format YYYY-MM-DD">
     <br>
     <input type="text" name="description" placeholder="Enter description...">
+    <span th:errors="*{description} "> To short decription,it has to be at least 20 characters long</span>
     <br>
     <input type="submit" value="Send form">
 

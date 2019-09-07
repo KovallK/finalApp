@@ -2,7 +2,8 @@ package pl.sda.ownApp.events;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.security.core.userdetails.User;
+import pl.sda.ownApp.user.User;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
+@Entity //encja sluzy do komunikacji serwisu z baza danych.
 @Getter
 @Setter
 public class Event {

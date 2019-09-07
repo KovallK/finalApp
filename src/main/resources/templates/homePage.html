@@ -13,8 +13,10 @@
     Zalogowany jako: <span th:text="${@userContextService.getLoggedUsername()}"></span>
 </h1>
 
+<td>
+    <span th:if="${@userContextService.getLoggedUsername() != null}"><a th:href="@{/eventForm}">Sent Form</a></span>
 
-
+</td>
 <a th:href="@{/register}">Register</a>
 <a th:href="@{/login}">Sign in</a>
 
